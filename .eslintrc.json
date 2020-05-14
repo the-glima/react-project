@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "max-len": [ "warn", {
+      "code": 120,
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": false
+    }]
+  }
+}

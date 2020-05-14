@@ -1,0 +1,19 @@
+image: node:latest
+
+pipelines:
+  default:
+    - step:
+       name: Build
+       caches:
+         - nodecustom
+         - yarn
+       script:
+         - yarn install --frozen-lockfile
+         - yarn lint
+         - yarn test
+         - yarn build
+
+definitions:
+  caches:
+    nodecustom: ./node_modules
+    yarn: /usr/local/share/.cache/yarn

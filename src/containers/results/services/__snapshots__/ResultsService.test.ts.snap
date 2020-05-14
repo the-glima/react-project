@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results Service fetchData: should fetch and return json data 1`] = `
+Object {
+  "last": Object {
+    "Winners": 812567,
+    "climbedSince": 9,
+    "closingDate": "08.05.2020, 19:00",
+    "currency": "EUR",
+    "date": Object {
+      "day": 8,
+      "dayOfWeek": "Freitag",
+      "full": "Die Lottozahlen vom Freitag, den 08.05.2020",
+      "hour": 21,
+      "minute": 0,
+      "month": 5,
+      "year": 2020,
+    },
+    "drawingDate": "08.05.2020, 21:00",
+    "euroNumbers": Array [
+      8,
+      9,
+    ],
+    "jackpot": "10",
+    "lateClosingDate": "08.05.2020, 20:10",
+    "marketingJackpot": "10",
+    "nr": 425,
+    "numbers": Array [
+      9,
+      11,
+      15,
+      36,
+      43,
+    ],
+    "odds": Object {
+      "rank0": Object {
+        "prize": 0,
+        "specialPrize": 0,
+        "winners": 0,
+      },
+      "rank1": Object {
+        "prize": 1328694340,
+        "specialPrize": 0,
+        "winners": 1,
+      },
+      "rank10": Object {
+        "prize": 1520,
+        "specialPrize": 0,
+        "winners": 62773,
+      },
+      "rank11": Object {
+        "prize": 1280,
+        "specialPrize": 0,
+        "winners": 135108,
+      },
+      "rank12": Object {
+        "prize": 770,
+        "specialPrize": 0,
+        "winners": 546864,
+      },
+      "rank2": Object {
+        "prize": 47210980,
+        "specialPrize": 0,
+        "winners": 4,
+      },
+      "rank3": Object {
+        "prize": 8331350,
+        "specialPrize": 0,
+        "winners": 8,
+      },
+      "rank4": Object {
+        "prize": 482970,
+        "specialPrize": 0,
+        "winners": 46,
+      },
+      "rank5": Object {
+        "prize": 23770,
+        "specialPrize": 0,
+        "winners": 841,
+      },
+      "rank6": Object {
+        "prize": 10760,
+        "specialPrize": 0,
+        "winners": 1444,
+      },
+      "rank7": Object {
+        "prize": 7500,
+        "specialPrize": 0,
+        "winners": 1777,
+      },
+      "rank8": Object {
+        "prize": 2670,
+        "specialPrize": 0,
+        "winners": 25727,
+      },
+      "rank9": Object {
+        "prize": 1750,
+        "specialPrize": 0,
+        "winners": 37974,
+      },
+    },
+    "specialMarketingJackpot": "10",
+  },
+  "next": Object {
+    "climbedSince": 9,
+    "closingDate": "15.05.2020, 19:00",
+    "currency": "EUR",
+    "date": Object {
+      "day": 15,
+      "dayOfWeek": "Freitag",
+      "full": "Die Lottozahlen vom Freitag, den 15.05.2020",
+      "hour": 21,
+      "minute": 0,
+      "month": 5,
+      "year": 2020,
+    },
+    "drawingDate": "15.05.2020, 21:00",
+    "jackpot": "10",
+    "lateClosingDate": "15.05.2020, 20:10",
+    "marketingJackpot": "10",
+    "nr": 426,
+    "specialMarketingJackpot": "10",
+  },
+}
+`;
+
+exports[`Results Service filterWinners: should filters winners removing 0 value item 1`] = `
+Array [
+  Object {
+    "prize": 1,
+    "specialPrize": 1,
+    "winners": 1,
+  },
+  Object {
+    "prize": 2,
+    "specialPrize": 2,
+    "winners": 2,
+  },
+]
+`;
+
+exports[`Results Service getResults: should transform and return results 1`] = `
+Object {
+  "currency": "EUR",
+  "last": Object {
+    "drawingDate": "08.05.2020, 21:00",
+    "id": 425,
+    "tiers": Object {
+      "0": Object {
+        "prize": 0,
+        "specialPrize": 0,
+        "winners": 0,
+      },
+      "1": Object {
+        "prize": 1328694340,
+        "specialPrize": 0,
+        "winners": 1,
+      },
+      "10": Object {
+        "prize": 1520,
+        "specialPrize": 0,
+        "winners": 62773,
+      },
+      "11": Object {
+        "prize": 1280,
+        "specialPrize": 0,
+        "winners": 135108,
+      },
+      "12": Object {
+        "prize": 770,
+        "specialPrize": 0,
+        "winners": 546864,
+      },
+      "2": Object {
+        "prize": 47210980,
+        "specialPrize": 0,
+        "winners": 4,
+      },
+      "3": Object {
+        "prize": 8331350,
+        "specialPrize": 0,
+        "winners": 8,
+      },
+      "4": Object {
+        "prize": 482970,
+        "specialPrize": 0,
+        "winners": 46,
+      },
+      "5": Object {
+        "prize": 23770,
+        "specialPrize": 0,
+        "winners": 841,
+      },
+      "6": Object {
+        "prize": 10760,
+        "specialPrize": 0,
+        "winners": 1444,
+      },
+      "7": Object {
+        "prize": 7500,
+        "specialPrize": 0,
+        "winners": 1777,
+      },
+      "8": Object {
+        "prize": 2670,
+        "specialPrize": 0,
+        "winners": 25727,
+      },
+      "9": Object {
+        "prize": 1750,
+        "specialPrize": 0,
+        "winners": 37974,
+      },
+    },
+    "winningNumbers": Object {
+      "euroNumbers": Array [
+        8,
+        9,
+      ],
+      "numbers": Array [
+        9,
+        11,
+        15,
+        36,
+        43,
+      ],
+    },
+  },
+  "next": Object {
+    "drawingDate": "15.05.2020, 21:00",
+    "id": 426,
+  },
+}
+`;
+
+exports[`Results Service getWinningNumbers: should return numbers or null 1`] = `
+Object {
+  "euroNumbers": Array [
+    5,
+    6,
+    7,
+  ],
+  "numbers": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+}
+`;
+
+exports[`Results Service mapTiers: should map tiers 1`] = `
+Array [
+  Object {
+    "prize": 0,
+    "specialPrize": 0,
+    "winners": 0,
+  },
+  Object {
+    "prize": 1328694340,
+    "specialPrize": 0,
+    "winners": 1,
+  },
+  Object {
+    "prize": 47210980,
+    "specialPrize": 0,
+    "winners": 4,
+  },
+  Object {
+    "prize": 8331350,
+    "specialPrize": 0,
+    "winners": 8,
+  },
+  Object {
+    "prize": 482970,
+    "specialPrize": 0,
+    "winners": 46,
+  },
+  Object {
+    "prize": 23770,
+    "specialPrize": 0,
+    "winners": 841,
+  },
+  Object {
+    "prize": 10760,
+    "specialPrize": 0,
+    "winners": 1444,
+  },
+  Object {
+    "prize": 7500,
+    "specialPrize": 0,
+    "winners": 1777,
+  },
+  Object {
+    "prize": 2670,
+    "specialPrize": 0,
+    "winners": 25727,
+  },
+  Object {
+    "prize": 1750,
+    "specialPrize": 0,
+    "winners": 37974,
+  },
+  Object {
+    "prize": 1520,
+    "specialPrize": 0,
+    "winners": 62773,
+  },
+  Object {
+    "prize": 1280,
+    "specialPrize": 0,
+    "winners": 135108,
+  },
+  Object {
+    "prize": 770,
+    "specialPrize": 0,
+    "winners": 546864,
+  },
+]
+`;
+
+exports[`Results Service sortTiers: should sort tiers in ascending order 1`] = `
+Array [
+  Array [
+    "rank0",
+    Object {
+      "prize": 0,
+      "specialPrize": 0,
+      "winners": 0,
+    },
+  ],
+  Array [
+    "rank1",
+    Object {
+      "prize": 1328694340,
+      "specialPrize": 0,
+      "winners": 1,
+    },
+  ],
+  Array [
+    "rank2",
+    Object {
+      "prize": 47210980,
+      "specialPrize": 0,
+      "winners": 4,
+    },
+  ],
+  Array [
+    "rank3",
+    Object {
+      "prize": 8331350,
+      "specialPrize": 0,
+      "winners": 8,
+    },
+  ],
+  Array [
+    "rank4",
+    Object {
+      "prize": 482970,
+      "specialPrize": 0,
+      "winners": 46,
+    },
+  ],
+  Array [
+    "rank5",
+    Object {
+      "prize": 23770,
+      "specialPrize": 0,
+      "winners": 841,
+    },
+  ],
+  Array [
+    "rank6",
+    Object {
+      "prize": 10760,
+      "specialPrize": 0,
+      "winners": 1444,
+    },
+  ],
+  Array [
+    "rank7",
+    Object {
+      "prize": 7500,
+      "specialPrize": 0,
+      "winners": 1777,
+    },
+  ],
+  Array [
+    "rank8",
+    Object {
+      "prize": 2670,
+      "specialPrize": 0,
+      "winners": 25727,
+    },
+  ],
+  Array [
+    "rank9",
+    Object {
+      "prize": 1750,
+      "specialPrize": 0,
+      "winners": 37974,
+    },
+  ],
+  Array [
+    "rank10",
+    Object {
+      "prize": 1520,
+      "specialPrize": 0,
+      "winners": 62773,
+    },
+  ],
+  Array [
+    "rank11",
+    Object {
+      "prize": 1280,
+      "specialPrize": 0,
+      "winners": 135108,
+    },
+  ],
+  Array [
+    "rank12",
+    Object {
+      "prize": 770,
+      "specialPrize": 0,
+      "winners": 546864,
+    },
+  ],
+]
+`;

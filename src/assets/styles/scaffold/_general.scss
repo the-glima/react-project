@@ -1,0 +1,31 @@
+@import '../../styles/config';
+
+html {
+  font-size: $font-size-root;
+  min-width: 300px;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  height: 100%;
+  color: $color-text;
+  background-color: $color-bg;
+  font-size: $font-size;
+  font-family: $font-family-system;
+  line-height: $font-line-height;
+  font-weight: $font-weight;
+  transition: background-color .2s ease-out;
+  -webkit-tap-highlight-color: transparentize($color-accent, .1);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

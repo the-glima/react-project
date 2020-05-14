@@ -1,29 +1,44 @@
-# README #
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Available Scripts
 
-### What is this repository for? ###
+In the project directory, you can run:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### `yarn start`
 
-### How do I get set up? ###
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### Contribution guidelines ###
+### `yarn test`
 
-* Writing tests
-* Code review
-* Other guidelines
+Launches the test runner in the interactive watch mode.<br />
+# Lottoland - Eurojackpot Winner Results
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+## How to run
+- Using Docker
+- Using Yarn/NPM
+
+### Using Docker
+if you have Docker installed just run:
+
+```
+$ docker-compose up --build
+```
+
+The application is being served in `http://localhost:3000`
+
+### Using Yarn/NPM
+This project uses [Create React App](https://facebook.github.io/create-react-app) which uses [Yarn](https://facebook.github.io/create-react-app). For faster development process install Yarn.
+
+#### `yarn start`
+Run the application o=in the url `http://localhost:3000`
+
+#### `yarn test`
+Run unit tests using Jest.
+
+#### `yarn e2e`
+Run e2e tests using Cypress.
