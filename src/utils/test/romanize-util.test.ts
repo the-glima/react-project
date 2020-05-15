@@ -1,4 +1,4 @@
-import {romanizeUtil} from './romanize-util'
+import {romanizeUtil} from '../romanize-util'
 
 describe('Util: Romanize', () => {
   it('should return the roman numeral given a number', () => {

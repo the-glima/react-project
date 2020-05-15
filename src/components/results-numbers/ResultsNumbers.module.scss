@@ -16,7 +16,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 400px;
-  margin: 1.4rem auto .7rem;
+  margin: .7rem 0;
 
   @include breakpoint(min-width, bp-media('md')) {
     flex-direction: initial;

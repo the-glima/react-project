@@ -2,15 +2,7 @@ export interface ResultsResponse {
   last: {
     nr: number
     currency: string
-    date: {
-      full: string
-      day: number
-      month: number
-      year: number
-      hour: number
-      minute: number
-      dayOfWeek: string
-    }
+    date: ResultsDate
     closingDate: string
     lateClosingDate: string
     drawingDate: string
@@ -28,15 +20,7 @@ export interface ResultsResponse {
   next: {
     nr: number
     currency: string
-    date: {
-      full: string
-      day: number
-      month: number
-      year: number
-      hour: number
-      minute: number
-      dayOfWeek: string
-    }
+    date: ResultsDate
     closingDate: string
     lateClosingDate: string
     drawingDate: string
@@ -56,4 +40,14 @@ export interface ResultsTier {
 export interface ResultsWinningNumbers {
   numbers: number[]
   euroNumbers: number[]
+}
+
+export interface ResultsDate {
+  full: string
+  day: number
+  month: number
+  year: number
+  hour: number
+  minute: number
+  dayOfWeek: string
 }

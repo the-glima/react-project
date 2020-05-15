@@ -1,4 +1,4 @@
-import {thousandSeparatorUtil} from './thousand-separator-util'
+import {thousandSeparatorUtil} from '../thousand-separator-util'
 
 describe('Util: Thousand Separator', () => {
   it('should return the string number with thousand comma separator', () => {

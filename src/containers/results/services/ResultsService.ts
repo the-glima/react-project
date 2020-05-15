@@ -34,6 +34,13 @@ const ResultsService = {
       currency: last.currency,
       last: {
         id: last.nr,
+        date: {
+          day: last.date.day,
+          month: last.date.month,
+          year: last.date.year,
+          hour: last.date.hour,
+          minute: last.date.minute
+        },
         drawingDate: last.drawingDate,
         winningNumbers: {
           numbers: last.numbers,
@@ -43,6 +50,13 @@ const ResultsService = {
       },
       next: {
         id: next.nr,
+        date: {
+          day: last.date.day,
+          month: last.date.month,
+          year: last.date.year,
+          hour: last.date.hour,
+          minute: last.date.minute
+        },
         drawingDate: next.drawingDate
       }
     }
@@ -56,6 +70,12 @@ const ResultsService = {
 
   getWinningNumbers: function (numbers: any): ResultsWinningNumbers | null {
     return numbers ? numbers : null
+  },
+
+  getResultDate: function (date: any, separator = '.'): any {
+    const addZero = (number: number) => (number && number < 10 ? `0${number}` : number)
+
+    return date ? `${addZero(date.day)}${separator}${addZero(date.month)}${separator}${date.year}` : null
   }
 }
 

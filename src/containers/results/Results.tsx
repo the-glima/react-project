@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 
 import ResultsNumbers from '../../components/results-numbers/ResultsNumbers'
 import ResultsTable from '../../components/results-table/ResultsTable'
+import ResultsInfo from '../../components/results-info/ResultsInfo'
 
 import * as actions from './redux/ResultsActions'
 import ResultsService from './services/ResultsService'
@@ -34,13 +35,17 @@ const Results = () => {
 
   const getResultTableData = () => ResultsService.filterWinners(resultsState?.last?.tiers)
   const getResultNumbers = () => ResultsService.getWinningNumbers(resultsState?.last?.winningNumbers)
+  const getResultDate = () => ResultsService.getResultDate(resultsState?.last?.date)
 
   return (
     <section>
       <header>
         <h1 className={styles.title}>EUROJACKPOT RESULTS & WINNING NUMBERS</h1>
       </header>
-      <ResultsNumbers data={getResultNumbers()} />
+      <div className={styles['results-table-header']}>
+        <ResultsNumbers data={getResultNumbers()} className={styles['results-numbers']} />
+        <ResultsInfo data={{id: resultsState?.last?.id, date: getResultDate()}} className={styles['results-next']} />
+      </div>
       <ResultsTable data={getResultTableData()} className={styles['results-table']} />
     </section>
   )

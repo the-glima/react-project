@@ -143,6 +143,13 @@ exports[`Service: Results getResults: should transform and return results 1`] = 
 Object {
   "currency": "EUR",
   "last": Object {
+    "date": Object {
+      "day": 8,
+      "hour": 21,
+      "minute": 0,
+      "month": 5,
+      "year": 2020,
+    },
     "drawingDate": "08.05.2020, 21:00",
     "id": 425,
     "tiers": Object {
@@ -227,6 +234,13 @@ Object {
     },
   },
   "next": Object {
+    "date": Object {
+      "day": 8,
+      "hour": 21,
+      "minute": 0,
+      "month": 5,
+      "year": 2020,
+    },
     "drawingDate": "15.05.2020, 21:00",
     "id": 426,
   },

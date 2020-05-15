@@ -1,4 +1,4 @@
-import {currencyUtil} from './currency-util'
+import {currencyUtil} from '../currency-util'
 
 describe('Util: Currency', () => {
   it('should return the roman numeral given a number', () => {

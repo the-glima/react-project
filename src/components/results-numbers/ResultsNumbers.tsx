@@ -6,24 +6,25 @@ import styles from './ResultsNumbers.module.scss'
 
 interface Props {
   data: ResultsWinningNumbers | null
+  className: string
 }
 
-const ResultNumbers = ({data}: Props) => {
+const ResultNumbers = (props: Props) => {
   return (
-    <div>
+    <div className={props.className}>
       <h2 className={styles.title}>
         EuroJackpot Results for <strong>Friday 08 May 2020</strong>
       </h2>
       <div className={styles['list-wrapper']}>
         <ul className={styles.list}>
-          {data?.numbers.map((number: number, index: number) => (
+          {props.data?.numbers.map((number: number, index: number) => (
             <li key={index} className={styles['list-item']}>
               {number}
             </li>
           ))}
         </ul>
         <ul className={styles.list}>
-          {data?.euroNumbers.map((number: number, index: number) => (
+          {props.data?.euroNumbers.map((number: number, index: number) => (
             <li key={index} className={`${styles['list-item']} ${styles['euro-numbers']}`}>
               {number}
             </li>

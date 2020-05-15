@@ -1,4 +1,4 @@
-import {matchTierUtil, matchTiers} from './match-tier-util'
+import {matchTierUtil, matchTiers} from '../match-tier-util'
 
 describe('Util: Match Tier', () => {
   it('should return the string number with thousand comma separator', () => {

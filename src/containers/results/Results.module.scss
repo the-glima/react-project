@@ -15,6 +15,18 @@
   }
 }
 
-.results-table {
-  margin-top: 2rem;
+.results-table-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(min-width, bp-media('md')) {
+    flex-direction: initial;
+    justify-content: space-between;
+  }
 }
+
+.results-next,
+.results-numbers { margin-bottom: 1rem; }
+
+.results-table { margin-top: 2rem; }
