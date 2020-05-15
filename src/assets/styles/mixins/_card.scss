@@ -1,0 +1,28 @@
+// Mixin - Card
+// --------------------------------------------
+
+@mixin card(
+  $featured: null,
+  $card-background-color: $color-white,
+  $card-border-color: $color-grey, 
+  $card-featured-color: $color-green) {
+  position: relative;
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-size: .9rem;
+  background-color: $card-background-color;
+  border: 1px solid $card-border-color;
+  @include shadow;
+
+  @if $featured {
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      display: inline-block;
+      width: 10px;
+      height: calc(100% + 2px);
+      background-color: $card-featured-color;
+    }
+  }
+}

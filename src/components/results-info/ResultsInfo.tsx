@@ -7,7 +7,7 @@ import styles from './ResultsInfo.module.scss'
 
 interface Props {
   data: {
-    id: number
+    id: any
     date: ResultsDate
   }
   className: string

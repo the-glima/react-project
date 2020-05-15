@@ -16,14 +16,14 @@ const ResultNumbers = (props: Props) => {
         EuroJackpot Results for <strong>Friday 08 May 2020</strong>
       </h2>
       <div className={styles['list-wrapper']}>
-        <ul className={styles.list}>
+        <ul className={styles.list} data-testid="numbers-list">
           {props.data?.numbers.map((number: number, index: number) => (
             <li key={index} className={styles['list-item']}>
               {number}
             </li>
           ))}
         </ul>
-        <ul className={styles.list}>
+        <ul className={styles.list} data-testid="euro-numbers-list">
           {props.data?.euroNumbers.map((number: number, index: number) => (
             <li key={index} className={`${styles['list-item']} ${styles['euro-numbers']}`}>
               {number}

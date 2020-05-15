@@ -1,5 +1,5 @@
 export const settings = {
   api: {
-    url: `${process.env.REACT_APP_RESULTS_URL}`
+    url: `${process.env.REACT_APP_MOCKY_RESULTS_URL}`
   }
 }

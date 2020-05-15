@@ -65,7 +65,7 @@ const ResultsService = {
   filterWinners: function (winners: any): any {
     const data = winners ? Object.values(winners) : null
 
-    return data && data.length ? data.filter((item: any) => item.winners > 0) : data
+    return data && data.length ? data.filter((item: any) => item.winners > 0) : null
   },
 
   getWinningNumbers: function (numbers: any): ResultsWinningNumbers | null {

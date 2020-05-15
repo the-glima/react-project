@@ -1,7 +1,7 @@
 @import '../../assets/styles/config';
 @import '../../assets/styles/mixins';
 
-.title {
+.results-title {
   margin-bottom: 1.2rem;
   padding-bottom: .5rem;
   font-weight: 700;
@@ -15,6 +15,12 @@
   }
 }
 
+.results-content {
+  position: relative;
+  transition: .7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation: fade .7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 .results-table-header {
   display: flex;
   flex-direction: column;
@@ -26,7 +32,32 @@
   }
 }
 
-.results-next,
+.results-info,
 .results-numbers { margin-bottom: 1rem; }
 
-.results-table { margin-top: 2rem; }
+.results-table { margin-top: 1rem;  }
+
+.results-info { 
+  @include breakpoint(min-width, bp-media('md')) {
+    max-width: 400px;
+  }
+}
+
+.results-loading { 
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-30% -50%);
+}
+
+@keyframes fade {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+

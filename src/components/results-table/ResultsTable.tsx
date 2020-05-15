@@ -13,9 +13,7 @@ interface Props {
 const ResultTable = (props: Props) => {
   return (
     <div className={props.className}>
-      {!props.data || !props.data.length ? (
-        <h2>Sorry, something wrong might happened. Try again later</h2>
-      ) : (
+      {props.data && props.data.length && (
         <table className={styles.table}>
           <thead>
             <tr>
@@ -25,11 +23,11 @@ const ResultTable = (props: Props) => {
               <th>Amount</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody data-testid="table-body">
             {props.data.map((row: any, index: number) => (
-              <tr key={index}>
+              <tr key={index} data-testid={`table-row-${index}`}>
                 <td data-thead="Tier">
-                  <strong>{utils.romanizeUtil(index)}</strong>
+                  <strong>{utils.romanizeUtil(index + 1)}</strong>
                 </td>
                 <td data-thead="Match">
                   <div className={styles['match']}>
