@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 1`] = `
+Object {
+  "euroNumbers": "2 Euronumbers",
+  "numbers": "5 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 2`] = `
+Object {
+  "euroNumbers": "1 Euronumbers",
+  "numbers": "5 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 3`] = `
+Object {
+  "euroNumbers": "0 Euronumbers",
+  "numbers": "5 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 4`] = `
+Object {
+  "euroNumbers": "2 Euronumbers",
+  "numbers": "4 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 5`] = `
+Object {
+  "euroNumbers": "1 Euronumbers",
+  "numbers": "4 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 6`] = `
+Object {
+  "euroNumbers": "0 Euronumbers",
+  "numbers": "4 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 7`] = `
+Object {
+  "euroNumbers": "2 Euronumbers",
+  "numbers": "3 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 8`] = `
+Object {
+  "euroNumbers": "2 Euronumbers",
+  "numbers": "2 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 9`] = `
+Object {
+  "euroNumbers": "1 Euronumbers",
+  "numbers": "3 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 10`] = `
+Object {
+  "euroNumbers": "0 Euronumbers",
+  "numbers": "3 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 11`] = `
+Object {
+  "euroNumbers": "2 Euronumbers",
+  "numbers": "1 Numbers",
+}
+`;
+
+exports[`Util: Match Tier should return the string number with thousand comma separator 12`] = `
+Object {
+  "euroNumbers": "1 Euronumbers",
+  "numbers": "2 Numbers",
+}
+`;

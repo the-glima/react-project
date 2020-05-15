@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Results Service fetchData: should fetch and return json data 1`] = `
+exports[`Service: Results fetchData: should fetch and return json data 1`] = `
 Object {
   "last": Object {
     "Winners": 812567,
@@ -124,7 +124,7 @@ Object {
 }
 `;
 
-exports[`Results Service filterWinners: should filters winners removing 0 value item 1`] = `
+exports[`Service: Results filterWinners: should filters winners removing 0 value item 1`] = `
 Array [
   Object {
     "prize": 1,
@@ -139,7 +139,7 @@ Array [
 ]
 `;
 
-exports[`Results Service getResults: should transform and return results 1`] = `
+exports[`Service: Results getResults: should transform and return results 1`] = `
 Object {
   "currency": "EUR",
   "last": Object {
@@ -233,7 +233,7 @@ Object {
 }
 `;
 
-exports[`Results Service getWinningNumbers: should return numbers or null 1`] = `
+exports[`Service: Results getWinningNumbers: should return numbers or null 1`] = `
 Object {
   "euroNumbers": Array [
     5,
@@ -249,7 +249,7 @@ Object {
 }
 `;
 
-exports[`Results Service mapTiers: should map tiers 1`] = `
+exports[`Service: Results mapTiers: should map tiers 1`] = `
 Array [
   Object {
     "prize": 0,
@@ -319,7 +319,7 @@ Array [
 ]
 `;
 
-exports[`Results Service sortTiers: should sort tiers in ascending order 1`] = `
+exports[`Service: Results sortTiers: should sort tiers in ascending order 1`] = `
 Array [
   Array [
     "rank0",

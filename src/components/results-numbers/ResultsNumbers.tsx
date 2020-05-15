@@ -1,7 +1,8 @@
 import React from 'react'
 
-import styles from './ResultsNumbers.module.scss'
 import {ResultsWinningNumbers} from '../../containers/results/models/ResultsResponseModel'
+
+import styles from './ResultsNumbers.module.scss'
 
 interface Props {
   data: ResultsWinningNumbers | null
@@ -10,17 +11,25 @@ interface Props {
 const ResultNumbers = ({data}: Props) => {
   return (
     <div>
-      <p>EuroJackpot Results for Friday 08 May 2020</p>
-      <ul>
-        {data?.numbers.map((number: number, index: number) => (
-          <li key={index}>{number}</li>
-        ))}
-        {data?.euroNumbers.map((number: number, index: number) => (
-          <li key={index} className={styles.featured}>
-            {number}
-          </li>
-        ))}
-      </ul>
+      <h2 className={styles.title}>
+        EuroJackpot Results for <strong>Friday 08 May 2020</strong>
+      </h2>
+      <div className={styles['list-wrapper']}>
+        <ul className={styles.list}>
+          {data?.numbers.map((number: number, index: number) => (
+            <li key={index} className={styles['list-item']}>
+              {number}
+            </li>
+          ))}
+        </ul>
+        <ul className={styles.list}>
+          {data?.euroNumbers.map((number: number, index: number) => (
+            <li key={index} className={`${styles['list-item']} ${styles['euro-numbers']}`}>
+              {number}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 
+import ResultsNumbers from '../../components/results-numbers/ResultsNumbers'
+import ResultsTable from '../../components/results-table/ResultsTable'
+
 import * as actions from './redux/ResultsActions'
 import ResultsService from './services/ResultsService'
 import {ResultsDOM} from './models/ResultsDOMModel'
-
-import ResultsNumbers from '../../components/results-numbers/ResultsNumbers'
-import ResultsTable from '../../components/results-table/ResultsTable'
+import styles from './Results.module.scss'
 
 // import {ResultsReducer, ResultsState} from './redux/ResultsReducer'
 
@@ -36,8 +37,11 @@ const Results = () => {
 
   return (
     <section>
+      <header>
+        <h1 className={styles.title}>EUROJACKPOT RESULTS & WINNING NUMBERS</h1>
+      </header>
       <ResultsNumbers data={getResultNumbers()} />
-      <ResultsTable data={getResultTableData()} />
+      <ResultsTable data={getResultTableData()} className={styles['results-table']} />
     </section>
   )
 }

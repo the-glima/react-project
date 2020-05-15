@@ -1,0 +1,9 @@
+// Mixin: Shadow
+// --------------------------------------------
+
+@mixin shadow(
+  $box-shadow: $box-shadow,
+  $box-shadow-color: $box-shadow-color,
+  $important: null) {
+  box-shadow: $box-shadow $box-shadow-color $important;
+}

@@ -15,13 +15,19 @@ html {
 body {
   height: 100%;
   color: $color-text;
-  background-color: $color-bg;
   font-size: $font-size;
   font-family: $font-family-system;
   line-height: $font-line-height;
   font-weight: $font-weight;
+  background-color: $color-bg;
   transition: background-color .2s ease-out;
-  -webkit-tap-highlight-color: transparentize($color-accent, .1);
+  -webkit-tap-highlight-color: transparentize(theme-color('primary', 'base'), .1);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

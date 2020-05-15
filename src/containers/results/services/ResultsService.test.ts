@@ -3,7 +3,7 @@ import {ResultsMock} from '../../../test/mocks/ResultsMock'
 import fetchMock from 'jest-fetch-mock'
 import {enableFetchMocks} from 'jest-fetch-mock'
 
-describe('Results Service', () => {
+describe('Service: Results', () => {
   const url = 'https://example.com'
 
   beforeEach(() => {
@@ -12,7 +12,7 @@ describe('Results Service', () => {
     fetchMock.resetMocks()
   })
 
-  test('fetchData: should fetch and return json data', async (done) => {
+  it('fetchData: should fetch and return json data', async (done) => {
     fetchMock.mockResponseOnce(JSON.stringify(ResultsMock))
 
     const result = await ResultsService.fetchData(url)
@@ -23,20 +23,20 @@ describe('Results Service', () => {
     done()
   })
 
-  test('fetchData: should thrown an error', async (done) => {
+  it('fetchData: should thrown an error', async (done) => {
     const error = new Error('Something went wrong')
     fetchMock.mockRejectOnce(error)
 
     const result = await ResultsService.fetchData(url)
 
-    expect(result.toString()).toEqual('Error: Something went wrong')
     expect(result).toBeInstanceOf(Error)
+    expect(result.toString()).toEqual('Error: Something went wrong')
     expect(fetchMock).toHaveBeenCalledTimes(1)
     expect(fetchMock).toHaveBeenCalledWith(url)
     done()
   })
 
-  test('sortTiers: should sort tiers in ascending order', () => {
+  it('sortTiers: should sort tiers in ascending order', () => {
     const tiers = ResultsMock.last.odds
     const result = ResultsService.sortTiers(tiers)
 
@@ -44,7 +44,7 @@ describe('Results Service', () => {
     expect(result).toMatchSnapshot()
   })
 
-  test('mapTiers: should map tiers', () => {
+  it('mapTiers: should map tiers', () => {
     const tiers = ResultsMock.last.odds
     const result = ResultsService.mapTiers(tiers as any)
 
@@ -52,7 +52,7 @@ describe('Results Service', () => {
     expect(result).toMatchSnapshot()
   })
 
-  test('getResults: should transform and return results', async (done) => {
+  it('getResults: should transform and return results', async (done) => {
     fetchMock.mockResponseOnce(JSON.stringify(ResultsMock))
 
     const result = await ResultsService.getResults()
@@ -61,7 +61,7 @@ describe('Results Service', () => {
     done()
   })
 
-  test('filterWinners: should filters winners removing 0 value item', () => {
+  it('filterWinners: should filters winners removing 0 value item', () => {
     const tiers = [
       {
         winners: 0,
@@ -90,7 +90,7 @@ describe('Results Service', () => {
     expect(result).toMatchSnapshot()
   })
 
-  test('getWinningNumbers: should return numbers or null', () => {
+  it('getWinningNumbers: should return numbers or null', () => {
     const numbers = {
       numbers: [1, 2, 3, 4],
       euroNumbers: [5, 6, 7]

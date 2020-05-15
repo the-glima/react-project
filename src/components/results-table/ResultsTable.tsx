@@ -1,21 +1,22 @@
 import React from 'react'
 
-import styles from './ResultsTable.module.scss'
 import {ResultsTier} from '../../containers/results/models/ResultsResponseModel'
+import * as utils from '../../utils/'
+
+import styles from './ResultsTable.module.scss'
 
 interface Props {
   data: ResultsTier[]
+  className: string
 }
 
-const ResultTable = ({data}: Props) => {
+const ResultTable = (props: Props) => {
   return (
-    <div>
-      <h1>EUROJACKPOT RESULTS & WINNING NUMBERS</h1>
-
-      {!data || !data.length ? (
+    <div className={props.className}>
+      {!props.data || !props.data.length ? (
         <h2>Sorry, something wrong might happened. Try again later</h2>
       ) : (
-        <table className={styles['result-table']}>
+        <table className={styles.table}>
           <thead>
             <tr>
               <th>Tier</th>
@@ -25,12 +26,19 @@ const ResultTable = ({data}: Props) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((row: any, index: number) => (
+            {props.data.map((row: any, index: number) => (
               <tr key={index}>
-                <td>{index}</td>
-                <td>5 Numbers + 2 Euronumbers</td>
-                <td>{row.winners}x</td>
-                <td>€{row.prize}</td>
+                <td data-thead="Tier">
+                  <strong>{utils.romanizeUtil(index)}</strong>
+                </td>
+                <td data-thead="Match">
+                  <div className={styles['match']}>
+                    <div>{utils.matchTierUtil(index)?.numbers} +</div>
+                    <div>{utils.matchTierUtil(index)?.euroNumbers}</div>
+                  </div>
+                </td>
+                <td data-thead="Winners">{utils.thousandSeparatorUtil(row.winners)}x</td>
+                <td data-thead="Amount">{utils.currencyUtil(row.prize)}</td>
               </tr>
             ))}
           </tbody>
