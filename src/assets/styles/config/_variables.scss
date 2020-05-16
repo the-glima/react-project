@@ -10,7 +10,7 @@ $color-grey-3: #D3D3D3;
 $color-orange: #ca7f26;
 $color-black: #212121;               
 $color-white: #ffffff;
-$color-bg: $color-white;
+$color-bg: #fefefe;
 $color-text: $color-black;
 $box-shadow-color: #D3D3D3;
 
@@ -32,17 +32,6 @@ $theme-colors: (
     'base': $color-grey-2,
     'dark': $color-grey-3
   ),
-  'contrast': (
-    '100': transparentize(#000, .9),
-    '200': transparentize(#000, .8),
-    '300': transparentize(#000, .7),
-    '400': transparentize(#000, .6),
-    '500': transparentize(#000, .5),
-    '600': transparentize(#000, .4),
-    '700': transparentize(#000, .3),
-    '800': transparentize(#000, .2),
-    '900': transparentize(#000, .1)
-  ),
   'text': (
     'base': $color-text
   ),
@@ -55,14 +44,14 @@ $theme-colors: (
 ) !default;
 
 // Text
-$font-size-root: 16px;
-$font-size: 1rem;
-$font-line-height: 1.6;
-$font-weight: 400;
-$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-size-root: 16px !default;
+$font-size: 1rem !default;
+$font-line-height: 1.6 !default;
+$font-weight: 400 !default;
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
 // Utils
-$transition: .06s ease-in-out;
+$transition: .06s ease-in-out !default;
 
 // Shadow
 $box-shadow: 3px 3px 0 !default;

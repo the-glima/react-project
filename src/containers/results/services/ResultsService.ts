@@ -1,6 +1,6 @@
 import {ResultsResponse, ResultsTier, ResultsWinningNumbers} from '../models/ResultsResponseModel'
-import {ResultsDOM} from '../models/ResultsDOMModel'
-import {settings} from '../../settings'
+import {ResultsDOM, ResultsDOMDate} from '../models/ResultsDOMModel'
+import {settings} from '../../../shared/settings'
 
 const ResultsService = {
   fetchData: async function (url = settings.api.url): Promise<ResultsResponse> {
@@ -12,7 +12,7 @@ const ResultsService = {
     }
   },
 
-  sortTiers: function (tiers: any): any[] {
+  sortTiers: function (tiers: ResultsTier): any[] {
     return Object.entries(tiers).sort((a, b) => a[0].localeCompare(b[0], 'en', {numeric: true}))
   },
 
@@ -62,20 +62,23 @@ const ResultsService = {
     }
   },
 
-  filterWinners: function (winners: any): any {
+  getResultWinners: function (winners: ResultsTier[] | undefined): any {
     const data = winners ? Object.values(winners) : null
 
     return data && data.length ? data.filter((item: any) => item.winners > 0) : null
   },
 
-  getWinningNumbers: function (numbers: any): ResultsWinningNumbers | null {
+  getWinningNumbers: function (numbers: ResultsWinningNumbers | undefined): any {
     return numbers ? numbers : null
   },
 
-  getResultDate: function (date: any, separator = '.'): any {
-    const addZero = (number: number) => (number && number < 10 ? `0${number}` : number)
+  getResultDate: function (date: ResultsDOMDate | undefined, separator = '/'): any {
+    if (!date) return null
 
-    return date ? `${addZero(date.day)}${separator}${addZero(date.month)}${separator}${date.year}` : null
+    const addZero = (number: number) => (number && number < 10 ? `0${number}` : number)
+    const dateFormatted = date && `${addZero(date.month)}${separator}${addZero(date.day)}${separator}${date.year}`
+
+    return dateFormatted
   }
 }
 

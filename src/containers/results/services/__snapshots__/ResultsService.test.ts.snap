@@ -127,14 +127,64 @@ Object {
 exports[`Service: Results filterWinners: should filters winners removing 0 value item 1`] = `
 Array [
   Object {
-    "prize": 1,
-    "specialPrize": 1,
+    "prize": 1328694340,
+    "specialPrize": 0,
     "winners": 1,
   },
   Object {
-    "prize": 2,
-    "specialPrize": 2,
-    "winners": 2,
+    "prize": 47210980,
+    "specialPrize": 0,
+    "winners": 4,
+  },
+  Object {
+    "prize": 8331350,
+    "specialPrize": 0,
+    "winners": 8,
+  },
+  Object {
+    "prize": 482970,
+    "specialPrize": 0,
+    "winners": 46,
+  },
+  Object {
+    "prize": 23770,
+    "specialPrize": 0,
+    "winners": 841,
+  },
+  Object {
+    "prize": 10760,
+    "specialPrize": 0,
+    "winners": 1444,
+  },
+  Object {
+    "prize": 7500,
+    "specialPrize": 0,
+    "winners": 1777,
+  },
+  Object {
+    "prize": 2670,
+    "specialPrize": 0,
+    "winners": 25727,
+  },
+  Object {
+    "prize": 1750,
+    "specialPrize": 0,
+    "winners": 37974,
+  },
+  Object {
+    "prize": 1520,
+    "specialPrize": 0,
+    "winners": 62773,
+  },
+  Object {
+    "prize": 1280,
+    "specialPrize": 0,
+    "winners": 135108,
+  },
+  Object {
+    "prize": 770,
+    "specialPrize": 0,
+    "winners": 546864,
   },
 ]
 `;

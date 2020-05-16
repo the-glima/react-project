@@ -1,5 +1,4 @@
-@import '../../assets/styles/config';
-@import '../../assets/styles/mixins';
+@import '../../assets/styles/utils';
 
 .results-title {
   margin-bottom: 1.2rem;
@@ -13,12 +12,6 @@
   @include breakpoint(min-width, bp-media('md')) {
     text-align: initial;
   }
-}
-
-.results-content {
-  position: relative;
-  transition: .7s cubic-bezier(0.22, 0.61, 0.36, 1);
-  animation: fade .7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .results-table-header {
@@ -35,7 +28,7 @@
 .results-info,
 .results-numbers { margin-bottom: 1rem; }
 
-.results-table { margin-top: 1rem;  }
+.results-table { margin-top: 1rem; }
 
 .results-info { 
   @include breakpoint(min-width, bp-media('md')) {
@@ -48,6 +41,12 @@
   top: 30%;
   left: 50%;
   transform: translate(-30% -50%);
+}
+
+.animation {
+  position: relative;
+  transition: .7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation: fade .7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 @keyframes fade {

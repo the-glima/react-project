@@ -3,9 +3,9 @@
 
 @mixin card(
   $featured: null,
-  $card-background-color: $color-white,
-  $card-border-color: $color-grey, 
-  $card-featured-color: $color-green) {
+  $card-background-color: theme-color('white', 'base'),
+  $card-border-color: theme-color('grey', 'base'), 
+  $card-featured-color: theme-color('primary', 'base')) {
   position: relative;
   padding: 1rem 1rem 1rem 1.5rem;
   font-size: .9rem;

@@ -1,14 +1,16 @@
 import {ResultsTier, ResultsWinningNumbers} from './ResultsResponseModel'
 
-interface ResultsDOMFields {
+export interface ResultsDOMDate {
+  day: number
+  month: number
+  year: number
+  hour: number
+  minute: number
+}
+
+export interface ResultsDOMFields {
   id: number
-  date: {
-    day: number
-    month: number
-    year: number
-    hour: number
-    minute: number
-  }
+  date: ResultsDOMDate
   drawingDate: string
   winningNumbers?: ResultsWinningNumbers
   tiers?: ResultsTier[]

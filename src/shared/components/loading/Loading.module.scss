@@ -1,0 +1,53 @@
+@import '../../../assets/styles/utils';
+
+@mixin stripe() {
+  width: 1rem;
+  height: 3rem;
+  background: theme-color('primary', 'base');
+  animation: load1 .95s infinite ease-in-out;
+}
+
+.loader {
+  @include stripe;
+  position: relative;
+  margin: 2rem auto;
+  color: theme-color('primary', 'base');
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+
+  &:before,
+  &:after {
+    @include stripe;
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  
+  &:before {
+    left: -1.5rem;
+    animation-delay: -0.32s;
+  }
+  
+  &:after {
+    left: 1.5rem;
+  }
+}
+
+.loader-label {
+  position: absolute;
+  top: 130px;
+  left: -24px;
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 3rem;
+  }
+  40% {
+    box-shadow: 0 -2rem;
+    height: 4rem;
+  }
+}

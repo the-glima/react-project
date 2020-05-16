@@ -1,6 +1,7 @@
 {
   "extends": [
-    "react-app"
+    "react-app",
+    "plugin:cypress/recommended"
   ],
   "rules": {
     "semi": ["error", "never"],

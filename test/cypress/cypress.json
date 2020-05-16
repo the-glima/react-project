@@ -1,0 +1,15 @@
+{
+  "video": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 60000,
+  "reporter": "junit",
+  "baseUrl": "http://localhost:3000",
+  "reporterOptions": {
+    "mochaFile": "test/cypress/junit/e2e-test-results.xml",
+    "toConsole": true
+  },
+  "integrationFolder": "test/cypress/integration",
+  "pluginsFile": "test/cypress/plugins/index.js",
+  "supportFile": "test/cypress/support/index.js",
+  "fixturesFolder": "test/cypress/fixture"
+}

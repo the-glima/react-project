@@ -1,7 +1,0 @@
-@import '../../assets/styles/config';
-@import '../../assets/styles/mixins';
-
-.error-message {
-  text-align: center;
-  @include card()
-}

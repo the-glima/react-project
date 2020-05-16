@@ -1,0 +1,6 @@
+@import '../../../assets/styles/utils';
+
+.error-message {
+  text-align: center;
+  @include card()
+}

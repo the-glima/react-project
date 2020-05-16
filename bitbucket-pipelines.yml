@@ -3,7 +3,7 @@ image: node:latest
 pipelines:
   default:
     - step:
-       name: Build
+       name: Lint, Test and Build
        caches:
          - nodecustom
          - yarn
