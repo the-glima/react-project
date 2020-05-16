@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:14-alpine
+FROM node:14-alpine AS builder
 
 # install global yarn
 RUN apk add --no-cache --virtual .build-deps \
@@ -12,20 +12,13 @@ RUN apk add --no-cache --virtual .build-deps \
   ln -s /usr/local/bin/dist/bin/yarn.js /usr/local/bin/yarn.js && \
   apk del .build-deps
 
-# set working directory
 WORKDIR /app
-
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# add app
 COPY . .
+RUN yarn
+RUN yarn run build
 
-# install app dependencies
-COPY package.json ./
-COPY yarn.lock ./
-RUN yarn install --frozen-lockfile
+FROM mhart/alpine-node
 RUN yarn global add serve
-
-# start app
-CMD ["serve", "-p", "3000", "-s", "."]
+WORKDIR /app
+COPY --from=builder /app/build .
+CMD ["serve", "-p", "8080", "-s", "."]

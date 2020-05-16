@@ -1,6 +1,6 @@
 import {ResultsResponse, ResultsTier, ResultsWinningNumbers} from '../models/ResultsResponseModel'
 import {ResultsDOM, ResultsDOMDate} from '../models/ResultsDOMModel'
-import {settings} from '../../../shared/settings'
+import {settings} from '../../../settings'
 
 const ResultsService = {
   fetchData: async function (url = settings.api.url): Promise<ResultsResponse> {
