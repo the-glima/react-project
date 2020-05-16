@@ -80,7 +80,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:local": "yarn build && serve -s build",
+    "build:serve": "yarn build && serve -s build",
     "test:watch": "react-scripts test",
     "test": "cross-env CI=true NODE_ICU_DATA=node_modules/full-icu react-scripts test --coverage --env=jsdom",
     "test:e2e": "cypress run --config-file test/cypress/cypress.json",
