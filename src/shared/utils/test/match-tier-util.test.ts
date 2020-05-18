@@ -2,7 +2,7 @@ import {matchTierUtil, matchTiers} from '../match-tier-util'
 
 describe('Util: Match Tier', () => {
   it('should return the string number with thousand comma separator', () => {
-    for (const [i] of matchTiers.entries()) {
+    for (const [i] of (matchTiers as any).entries()) {
       expect(matchTierUtil(i)).toMatchSnapshot()
     }
   })

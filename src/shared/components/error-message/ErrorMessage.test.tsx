@@ -8,6 +8,6 @@ describe('Error Message', () => {
     const {getByText} = render(<ErrorMessage className="test" />)
 
     expect(getByText('😕')).toBeInTheDocument()
-    expect(getByText('Sorry, something went wrong. Please, try again later')).toBeInTheDocument()
+    expect(getByText(/Sorry, something went wrong! Please, try again later/i)).toBeInTheDocument()
   })
 })

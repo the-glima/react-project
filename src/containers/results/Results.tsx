@@ -40,15 +40,19 @@ const Results = () => {
 
   return (
     <section>
-      {!hasError && !isLoading && (
+      {!isLoading && (
         <header className={styles['animation']}>
           <h1 className={styles['results-title']}>EUROJACKPOT RESULTS & WINNING NUMBERS</h1>
         </header>
       )}
 
-      {hasError && <ErrorMessage className={styles['results-error']} />}
-
       {isLoading && <Loading className={styles['results-loading']} />}
+
+      {hasError && (
+        <div className={styles['animation']}>
+          <ErrorMessage className={styles['results-error']} />
+        </div>
+      )}
 
       {!hasError && !isLoading && (
         <div className={styles['animation']}>

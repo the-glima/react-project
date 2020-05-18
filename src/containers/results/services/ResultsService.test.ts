@@ -2,7 +2,7 @@ import ResultsService from './ResultsService'
 import fetchMock from 'jest-fetch-mock'
 import {enableFetchMocks} from 'jest-fetch-mock'
 
-import {resultsMock} from '../../../../test/mocks/results-mock'
+import {resultsResponseMock} from '../../../../test/mocks/results-mock'
 import {resultsStoreTiersMock} from '../../../../test/mocks'
 
 describe('Service: Results', () => {
@@ -15,7 +15,7 @@ describe('Service: Results', () => {
   })
 
   it('fetchData: should fetch and return json data', async (done) => {
-    fetchMock.mockResponseOnce(JSON.stringify(resultsMock))
+    fetchMock.mockResponseOnce(JSON.stringify(resultsResponseMock))
 
     const result = await ResultsService.fetchData(url)
 
@@ -29,25 +29,28 @@ describe('Service: Results', () => {
     const error = new Error('Something went wrong')
     fetchMock.mockRejectOnce(error)
 
-    const result = await ResultsService.fetchData(url)
+    try {
+      await ResultsService.fetchData(url)
+    } catch (error) {
+      expect(error).toBeInstanceOf(Error)
+      expect(error.toString()).toEqual('Error: Something went wrong')
+    }
 
-    expect(result).toBeInstanceOf(Error)
-    expect(result.toString()).toEqual('Error: Something went wrong')
     expect(fetchMock).toHaveBeenCalledTimes(1)
     expect(fetchMock).toHaveBeenCalledWith(url)
     done()
   })
 
   it('sortTiers: should sort tiers in ascending order', () => {
-    const tiers = resultsMock.last.odds
-    const result = ResultsService.sortTiers(tiers)
+    const tiers = resultsResponseMock.last.odds
+    const result = ResultsService.sortTiers(tiers as any)
 
     expect(result).toHaveLength(Object.entries(tiers).length)
     expect(result).toMatchSnapshot()
   })
 
   it('mapTiers: should map tiers', () => {
-    const tiers = resultsMock.last.odds
+    const tiers = resultsResponseMock.last.odds
     const result = ResultsService.mapTiers(tiers as any)
 
     expect(result).toHaveLength(Object.entries(tiers).length)
@@ -55,7 +58,7 @@ describe('Service: Results', () => {
   })
 
   it('getResults: should transform and return results', async (done) => {
-    fetchMock.mockResponseOnce(JSON.stringify(resultsMock))
+    fetchMock.mockResponseOnce(JSON.stringify(resultsResponseMock))
 
     const result = await ResultsService.getResults()
 

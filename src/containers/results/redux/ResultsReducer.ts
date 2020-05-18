@@ -15,7 +15,7 @@ const initialState: ResultsState = {
 
 export const ResultsReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case ActionTypes.FetchResultsInit: {
+    case ActionTypes.FETCH_RESULTS_INIT: {
       return {
         ...state,
         isLoading: true,
@@ -23,7 +23,7 @@ export const ResultsReducer = (state = initialState, action: any) => {
       }
     }
 
-    case ActionTypes.FetchResultsSuccess: {
+    case ActionTypes.FETCH_RESULTS_SUCCESS: {
       const {result} = action.payload
 
       return {
@@ -34,7 +34,7 @@ export const ResultsReducer = (state = initialState, action: any) => {
       }
     }
 
-    case ActionTypes.FetchResultsFailure: {
+    case ActionTypes.FETCH_RESULTS_FAILURE: {
       return {
         ...state,
         isLoading: false,

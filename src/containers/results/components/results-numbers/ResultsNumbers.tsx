@@ -16,7 +16,7 @@ interface Props {
 const ResultNumbers = (props: Props) => {
   return (
     <div className={props.className}>
-      <h2 className={styles.title}>
+      <h2 className={styles.title} data-testid="numbers-title">
         EuroJackpot Results for <strong>{utils.literalDateUtil(props.data?.date)}</strong>
       </h2>
       <div className={styles['list-wrapper']}>

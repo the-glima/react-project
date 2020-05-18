@@ -11,5 +11,6 @@
   "integrationFolder": "test/cypress/integration",
   "pluginsFile": "test/cypress/plugins/index.js",
   "supportFile": "test/cypress/support/index.js",
-  "fixturesFolder": "test/cypress/fixture"
+  "fixturesFolder": "test/cypress/fixture",
+  "screenshotsFolder": "test/cypress/screenshots"
 }

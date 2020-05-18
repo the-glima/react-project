@@ -18,12 +18,9 @@ A SPA Client for consuming and showing Lottoland Eurojackpot Winner Results data
 - [Create React App](https://facebook.github.io/create-react-app): for bootstrapping this project
 
 ## Authorization Issue
-I've already spoken with Eva that Lottoland links/endpoints were not accessible for me. It throws a `net::ERR_CERT_AUTHORITY_INVALID` error:
+I've already spoken with Eva that Lottoland links/endpoints were not accessible for me. It throws a `net::ERR_CERT_AUTHORITY_INVALID` error, also Spain seems to block links of online bets websites:
 
-<img src="docs/cert-auth-error.jpg" alt="net::ERR_CERT_AUTHORITY_INVALID" width="500">
-
-Also Spain seems to block links of online bets websites:
-<img src="docs/spain-regulation.png" alt="Spain's regulation" width="500">
+![net::ERR_CERT_AUTHORITY_INVALID](https://bitbucket.org/gabrihelllima/eurojackpot-winner-results/raw/c32e6c71911b107848a89e4dfb904fb8c6882027/docs/cert-auth-error.jpg) ![Spain's regulation](https://bitbucket.org/gabrihelllima/eurojackpot-winner-results/raw/c32e6c71911b107848a89e4dfb904fb8c6882027/docs/spain-regulation.png)
 
 For consuming on the web I've used a VPN but in the application doing a fetch, I was not able to consume the API. Did try bypassing this authorization and CORS with some browser extension but was in vain. In the end, I've used [Mocky](https://www.mocky.io/) to mock the same response of the API endpoint that was sent to me. 
 
@@ -39,7 +36,6 @@ if you have Docker installed just run:
 ```
 $ docker-compose up --build
 ```
-
 The build version of the application will be served on: `http://localhost:8080`
 
 ### Using Yarn or NPM
@@ -49,39 +45,48 @@ For faster development workflow use [Yarn](https://classic.yarnpkg.com/en/docs/i
 ```
 $ yarn
 ```
-> Alternatively: `npm install`
+> Alternatively run: `npm install`
 
 #### Run the application, it'll be served on: `http://localhost:3000`
 ```sh
 $ yarn start
 ```
-> Alternatively: `npm run start`
+> Alternatively run: `npm run start`
 
 #### Run unit tests:
 ```sh
 $ yarn test
 ```
-> Alternatively: `npm test`
+> Alternatively run: `npm test`
 
 #### Lint code using:
 ```sh
 $ yarn lint
 ```
-> Alternatively: `npm run lint`
+> Alternatively run: `npm run lint`
 
 #### Run e2e tests using the terminal:
 ```sh
 $ yarn test:e2e
 ```
-> Alternatively: `npm run test:e2e`
+> Alternatively run: `npm run test:e2e`
 
 #### Run e2e tests using Electron App:
 ```sh
 $ yarn test:e2e:dev
 ```
-> Alternatively: `npm run test:e2e:dev`
+> Alternatively run: `npm run test:e2e:dev`
 
-## Bitbucket CI/CD
+## GitFlow
+I'm using feature branches for my features/refactors/etc. Also, Squashing the commits when merging a PR to master, this way the master branch is cleaner and shows only meaningful commits. Not using Development branch but Master directly.
+
+![Master Branch Commits](https://bitbucket.org/gabrihelllima/eurojackpot-winner-results/raw/c32e6c71911b107848a89e4dfb904fb8c6882027/docs/gitflow.jpg)
+
+PRs have some rules (build passing for example) to be able to be merged to master:
+
+![Master Branch Policies Rules](https://bitbucket.org/gabrihelllima/eurojackpot-winner-results/raw/c32e6c71911b107848a89e4dfb904fb8c6882027/docs/master-policies.jpg)
+
+## Bitbucket CI
 I'm using Bitbucket and its pipelines. In `bitbucket-pipelines.yaml` will run linting, tests, and build tasks when pushing to a PR targeting `master branch`.
 
 ## Environment Variables

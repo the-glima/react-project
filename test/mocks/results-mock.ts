@@ -1,4 +1,4 @@
-export const resultsMock = {
+export const resultsResponseMock = {
   last: {
     nr: 425,
     currency: 'EUR',

@@ -8,7 +8,7 @@ const ResultsService = {
       const response = await fetch(url)
       return await response.json()
     } catch (error) {
-      return error
+      throw error
     }
   },
 
@@ -16,7 +16,7 @@ const ResultsService = {
     return Object.entries(tiers).sort((a, b) => a[0].localeCompare(b[0], 'en', {numeric: true}))
   },
 
-  mapTiers: function (tiers: ResultsTier): ResultsTier[] {
+  mapTiers: function (tiers: any): ResultsTier[] {
     const sortedTiers: ResultsTier[] = this.sortTiers(tiers)
 
     return Object.values(sortedTiers).map((tier: any) => ({
@@ -28,7 +28,7 @@ const ResultsService = {
 
   getResults: async function (): Promise<ResultsDOM> {
     const {last, next} = await this.fetchData()
-    const tiers = this.mapTiers(last.odds as any)
+    const tiers = last?.odds ? this.mapTiers(last.odds) : []
 
     return {
       currency: last.currency,
@@ -46,7 +46,7 @@ const ResultsService = {
           numbers: last.numbers,
           euroNumbers: last.euroNumbers
         },
-        tiers: {...tiers}
+        tiers: [...tiers]
       },
       next: {
         id: next.nr,

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.76" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-05-18T02:02:22" tests="0" file="test\cypress\integration\Results.spec.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Winning Numbers Results" timestamp="2020-05-18T02:02:22" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Large Resolution" timestamp="2020-05-18T02:02:22" tests="4" failures="0" time="10.439">
+    <testcase name="Winning Numbers Results Large Resolution should check if results page and its components loads" time="3.423" classname="should check if results page and its components loads">
+    </testcase>
+    <testcase name="Winning Numbers Results Large Resolution should check if results numbers component" time="2.348" classname="should check if results numbers component">
+    </testcase>
+    <testcase name="Winning Numbers Results Large Resolution should check if results info component" time="2.331" classname="should check if results info component">
+    </testcase>
+    <testcase name="Winning Numbers Results Large Resolution should check if results table component" time="2.337" classname="should check if results table component">
+    </testcase>
+  </testsuite>
+  <testsuite name="Mobile Resolution" timestamp="2020-05-18T02:02:33" tests="1" failures="0" time="2.321">
+    <testcase name="Winning Numbers Results Mobile Resolution should check that table data thead is not visible" time="2.321" classname="should check that table data thead is not visible">
+    </testcase>
+  </testsuite>
+</testsuites>

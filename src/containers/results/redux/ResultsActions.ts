@@ -1,19 +1,19 @@
 export enum ActionTypes {
-  FetchResultsInit = '[INIT] Fetch Results',
-  FetchResultsSuccess = '[SUCCESS] Fetch Results',
-  FetchResultsFailure = '[FAILURE] Fetch Results'
+  FETCH_RESULTS_INIT = 'FETCH_RESULTS_INIT',
+  FETCH_RESULTS_SUCCESS = 'FETCH_RESULTS_SUCCESS',
+  FETCH_RESULTS_FAILURE = 'FETCH_RESULTS_FAILURE'
 }
 
 export const fetchResultsInit = () => ({
-  type: ActionTypes.FetchResultsInit
+  type: ActionTypes.FETCH_RESULTS_INIT
 })
 
 export const fetchResultsSuccess = (result: any) => ({
-  type: ActionTypes.FetchResultsSuccess,
+  type: ActionTypes.FETCH_RESULTS_SUCCESS,
   payload: {result}
 })
 
 export const fetchResultsFailure = (error: Error) => ({
-  type: ActionTypes.FetchResultsFailure,
+  type: ActionTypes.FETCH_RESULTS_FAILURE,
   payload: {error}
 })

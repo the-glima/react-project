@@ -12,7 +12,7 @@ const ErrorMessage = (props: Props) => {
       <span role="img" aria-label="Confused Face">
         😕
       </span>
-      <h2>Sorry, something went wrong. Please, try again later</h2>
+      <h2>Sorry, something went wrong! Please, try again later.</h2>
     </div>
   )
 }

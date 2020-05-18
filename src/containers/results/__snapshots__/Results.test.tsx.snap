@@ -1,3 +1,651 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Container: Results loads and displays results component 1`] = `"<div><section><header class=\\"animation\\"><h1 class=\\"results-title\\">EUROJACKPOT RESULTS &amp; WINNING NUMBERS</h1></header><div class=\\"animation\\"><div class=\\"results-table-header\\"><div class=\\"results-numbers\\"><h2 class=\\"title\\">EuroJackpot Results for <strong>Friday, 8 May 2020</strong></h2><div class=\\"list-wrapper\\"><ul class=\\"list\\" data-testid=\\"numbers-list\\"><li class=\\"list-item\\">9</li><li class=\\"list-item\\">11</li><li class=\\"list-item\\">15</li><li class=\\"list-item\\">36</li><li class=\\"list-item\\">43</li></ul><ul class=\\"list\\" data-testid=\\"euro-numbers-list\\"><li class=\\"list-item euro-numbers\\">8</li><li class=\\"list-item euro-numbers\\">9</li></ul></div></div><div class=\\"card results-info\\" data-testid=\\"results-info\\"><h3 class=\\"card-title\\">The EuroJackpot numbers for 08/05/2020</h3><p><strong>The 425th draw for the EuroJackpot was held on 08/05/2020</strong>, as usual at 9pm in Helsinki.</p></div></div><div class=\\"results-table\\"><table class=\\"table\\" data-testid=\\"results-table\\"><thead><tr><th>Tier</th><th>Match</th><th>Winners</th><th>Amount</th></tr></thead><tbody data-testid=\\"table-body\\"><tr data-testid=\\"table-row-0\\"><td data-thead=\\"Tier\\"><strong>I</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>5 Numbers +</div><div>2 Euronumbers</div></div></td><td data-thead=\\"Winners\\">1x</td><td data-thead=\\"Amount\\">€ 13.286.943,40</td></tr><tr data-testid=\\"table-row-1\\"><td data-thead=\\"Tier\\"><strong>II</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>5 Numbers +</div><div>1 Euronumbers</div></div></td><td data-thead=\\"Winners\\">4x</td><td data-thead=\\"Amount\\">€ 472.109,80</td></tr><tr data-testid=\\"table-row-2\\"><td data-thead=\\"Tier\\"><strong>III</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>5 Numbers +</div><div>0 Euronumbers</div></div></td><td data-thead=\\"Winners\\">8x</td><td data-thead=\\"Amount\\">€ 83.313,50</td></tr><tr data-testid=\\"table-row-3\\"><td data-thead=\\"Tier\\"><strong>IV</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>4 Numbers +</div><div>2 Euronumbers</div></div></td><td data-thead=\\"Winners\\">46x</td><td data-thead=\\"Amount\\">€ 4829,70</td></tr><tr data-testid=\\"table-row-4\\"><td data-thead=\\"Tier\\"><strong>V</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>4 Numbers +</div><div>1 Euronumbers</div></div></td><td data-thead=\\"Winners\\">841x</td><td data-thead=\\"Amount\\">€ 237,70</td></tr><tr data-testid=\\"table-row-5\\"><td data-thead=\\"Tier\\"><strong>VI</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>4 Numbers +</div><div>0 Euronumbers</div></div></td><td data-thead=\\"Winners\\">1,444x</td><td data-thead=\\"Amount\\">€ 107,60</td></tr><tr data-testid=\\"table-row-6\\"><td data-thead=\\"Tier\\"><strong>VII</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>3 Numbers +</div><div>2 Euronumbers</div></div></td><td data-thead=\\"Winners\\">1,777x</td><td data-thead=\\"Amount\\">€ 75,00</td></tr><tr data-testid=\\"table-row-7\\"><td data-thead=\\"Tier\\"><strong>VIII</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>2 Numbers +</div><div>2 Euronumbers</div></div></td><td data-thead=\\"Winners\\">25,727x</td><td data-thead=\\"Amount\\">€ 26,70</td></tr><tr data-testid=\\"table-row-8\\"><td data-thead=\\"Tier\\"><strong>IX</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>3 Numbers +</div><div>1 Euronumbers</div></div></td><td data-thead=\\"Winners\\">37,974x</td><td data-thead=\\"Amount\\">€ 17,50</td></tr><tr data-testid=\\"table-row-9\\"><td data-thead=\\"Tier\\"><strong>X</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>3 Numbers +</div><div>0 Euronumbers</div></div></td><td data-thead=\\"Winners\\">62,773x</td><td data-thead=\\"Amount\\">€ 15,20</td></tr><tr data-testid=\\"table-row-10\\"><td data-thead=\\"Tier\\"><strong>XI</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>1 Numbers +</div><div>2 Euronumbers</div></div></td><td data-thead=\\"Winners\\">135,108x</td><td data-thead=\\"Amount\\">€ 12,80</td></tr><tr data-testid=\\"table-row-11\\"><td data-thead=\\"Tier\\"><strong>XII</strong></td><td data-thead=\\"Match\\"><div class=\\"match\\"><div>2 Numbers +</div><div>1 Euronumbers</div></div></td><td data-thead=\\"Winners\\">546,864x</td><td data-thead=\\"Amount\\">€ 7,70</td></tr></tbody></table></div></div></section></div>"`;
+exports[`Container: Results Content should render all data successfully 1`] = `
+<DocumentFragment>
+  <section>
+    <header
+      class="animation"
+    >
+      <h1
+        class="results-title"
+      >
+        EUROJACKPOT RESULTS & WINNING NUMBERS
+      </h1>
+    </header>
+    <div
+      class="animation"
+    >
+      <div
+        class="results-table-header"
+      >
+        <div
+          class="results-numbers"
+        >
+          <h2
+            class="title"
+            data-testid="numbers-title"
+          >
+            EuroJackpot Results for 
+            <strong>
+              Friday, 8 May 2020
+            </strong>
+          </h2>
+          <div
+            class="list-wrapper"
+          >
+            <ul
+              class="list"
+              data-testid="numbers-list"
+            >
+              <li
+                class="list-item"
+              >
+                9
+              </li>
+              <li
+                class="list-item"
+              >
+                11
+              </li>
+              <li
+                class="list-item"
+              >
+                15
+              </li>
+              <li
+                class="list-item"
+              >
+                36
+              </li>
+              <li
+                class="list-item"
+              >
+                43
+              </li>
+            </ul>
+            <ul
+              class="list"
+              data-testid="euro-numbers-list"
+            >
+              <li
+                class="list-item euro-numbers"
+              >
+                8
+              </li>
+              <li
+                class="list-item euro-numbers"
+              >
+                9
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="card results-info"
+          data-testid="results-info"
+        >
+          <h3
+            class="card-title"
+          >
+            The EuroJackpot numbers for 08/05/2020
+          </h3>
+          <p>
+            <strong>
+              The 425th draw for the EuroJackpot was held on 08/05/2020
+            </strong>
+            , as usual at 9pm in Helsinki.
+          </p>
+        </div>
+      </div>
+      <div
+        class="results-table"
+      >
+        <table
+          class="table"
+          data-testid="results-table"
+        >
+          <thead>
+            <tr>
+              <th>
+                Tier
+              </th>
+              <th>
+                Match
+              </th>
+              <th>
+                Winners
+              </th>
+              <th>
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            data-testid="table-body"
+          >
+            <tr
+              data-testid="table-row-0"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  I
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    5 Numbers +
+                  </div>
+                  <div>
+                    2 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                1x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 13.286.943,40
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-1"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  II
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    5 Numbers +
+                  </div>
+                  <div>
+                    1 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                4x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 472.109,80
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-2"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  III
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    5 Numbers +
+                  </div>
+                  <div>
+                    0 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                8x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 83.313,50
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-3"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  IV
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    4 Numbers +
+                  </div>
+                  <div>
+                    2 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                46x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 4829,70
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-4"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  V
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    4 Numbers +
+                  </div>
+                  <div>
+                    1 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                841x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 237,70
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-5"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  VI
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    4 Numbers +
+                  </div>
+                  <div>
+                    0 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                1,444x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 107,60
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-6"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  VII
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    3 Numbers +
+                  </div>
+                  <div>
+                    2 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                1,777x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 75,00
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-7"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  VIII
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    2 Numbers +
+                  </div>
+                  <div>
+                    2 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                25,727x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 26,70
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-8"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  IX
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    3 Numbers +
+                  </div>
+                  <div>
+                    1 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                37,974x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 17,50
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-9"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  X
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    3 Numbers +
+                  </div>
+                  <div>
+                    0 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                62,773x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 15,20
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-10"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  XI
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    1 Numbers +
+                  </div>
+                  <div>
+                    2 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                135,108x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 12,80
+              </td>
+            </tr>
+            <tr
+              data-testid="table-row-11"
+            >
+              <td
+                data-thead="Tier"
+              >
+                <strong>
+                  XII
+                </strong>
+              </td>
+              <td
+                data-thead="Match"
+              >
+                <div
+                  class="match"
+                >
+                  <div>
+                    2 Numbers +
+                  </div>
+                  <div>
+                    1 Euronumbers
+                  </div>
+                </div>
+              </td>
+              <td
+                data-thead="Winners"
+              >
+                546,864x
+              </td>
+              <td
+                data-thead="Amount"
+              >
+                € 7,70
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Container: Results Content should render error message when an error occur 1`] = `
+<DocumentFragment>
+  <section>
+    <header
+      class="animation"
+    >
+      <h1
+        class="results-title"
+      >
+        EUROJACKPOT RESULTS & WINNING NUMBERS
+      </h1>
+    </header>
+    <div
+      class="animation"
+    >
+      <div
+        class="results-error error-message"
+      >
+        <span
+          aria-label="Confused Face"
+          role="img"
+        >
+          😕
+        </span>
+        <h2>
+          Sorry, something went wrong! Please, try again later.
+        </h2>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Container: Results Redux should only dispatch init when rendering component 1`] = `
+<DocumentFragment>
+  <section>
+    <header
+      class="animation"
+    >
+      <h1
+        class="results-title"
+      >
+        EUROJACKPOT RESULTS & WINNING NUMBERS
+      </h1>
+    </header>
+    <div
+      class="animation"
+    >
+      <div
+        class="results-table-header"
+      >
+        <div
+          class="results-numbers"
+        >
+          <h2
+            class="title"
+            data-testid="numbers-title"
+          >
+            EuroJackpot Results for 
+            <strong />
+          </h2>
+          <div
+            class="list-wrapper"
+          >
+            <ul
+              class="list"
+              data-testid="numbers-list"
+            />
+            <ul
+              class="list"
+              data-testid="euro-numbers-list"
+            />
+          </div>
+        </div>
+        <div
+          class="card results-info"
+          data-testid="results-info"
+        >
+          <h3
+            class="card-title"
+          >
+            The EuroJackpot numbers for 
+          </h3>
+          <p>
+            <strong>
+              The  draw for the EuroJackpot was held on 
+            </strong>
+            , as usual at 9pm in Helsinki.
+          </p>
+        </div>
+      </div>
+      <div
+        class="results-table"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -202,73 +202,73 @@ Object {
     },
     "drawingDate": "08.05.2020, 21:00",
     "id": 425,
-    "tiers": Object {
-      "0": Object {
+    "tiers": Array [
+      Object {
         "prize": 0,
         "specialPrize": 0,
         "winners": 0,
       },
-      "1": Object {
+      Object {
         "prize": 1328694340,
         "specialPrize": 0,
         "winners": 1,
       },
-      "10": Object {
-        "prize": 1520,
-        "specialPrize": 0,
-        "winners": 62773,
-      },
-      "11": Object {
-        "prize": 1280,
-        "specialPrize": 0,
-        "winners": 135108,
-      },
-      "12": Object {
-        "prize": 770,
-        "specialPrize": 0,
-        "winners": 546864,
-      },
-      "2": Object {
+      Object {
         "prize": 47210980,
         "specialPrize": 0,
         "winners": 4,
       },
-      "3": Object {
+      Object {
         "prize": 8331350,
         "specialPrize": 0,
         "winners": 8,
       },
-      "4": Object {
+      Object {
         "prize": 482970,
         "specialPrize": 0,
         "winners": 46,
       },
-      "5": Object {
+      Object {
         "prize": 23770,
         "specialPrize": 0,
         "winners": 841,
       },
-      "6": Object {
+      Object {
         "prize": 10760,
         "specialPrize": 0,
         "winners": 1444,
       },
-      "7": Object {
+      Object {
         "prize": 7500,
         "specialPrize": 0,
         "winners": 1777,
       },
-      "8": Object {
+      Object {
         "prize": 2670,
         "specialPrize": 0,
         "winners": 25727,
       },
-      "9": Object {
+      Object {
         "prize": 1750,
         "specialPrize": 0,
         "winners": 37974,
       },
-    },
+      Object {
+        "prize": 1520,
+        "specialPrize": 0,
+        "winners": 62773,
+      },
+      Object {
+        "prize": 1280,
+        "specialPrize": 0,
+        "winners": 135108,
+      },
+      Object {
+        "prize": 770,
+        "specialPrize": 0,
+        "winners": 546864,
+      },
+    ],
     "winningNumbers": Object {
       "euroNumbers": Array [
         8,
