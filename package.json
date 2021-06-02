@@ -1,8 +1,8 @@
 {
-  "name": "eurojackpot-winner-results",
+  "name": "react-project",
   "version": "0.1.0",
   "private": true,
-  "description": "Lottoland - Eurojackopt Winner Results Page",
+  "description": "A SPA Client for consuming and endpoint and showing some data.",
   "author": {
     "name": "Gabriel Lima",
     "email": "me@gabriel-lima.com",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/gabrihelllima/eurojackpot-winner-results"
+    "url": "https://bitbucket.org/gabrihelllima/react-project"
   },
   "dependencies": {
     "@types/node": "^13.11.1",

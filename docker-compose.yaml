@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  lottoland-web-client:
-    container_name: lottoland-web-client
+  web-client:
+    container_name: web-client
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: lottoland-web-client
+    image: web-client
     ports:
      - "8080:8080"
     volumes:

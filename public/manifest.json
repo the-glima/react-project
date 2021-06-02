@@ -1,6 +1,6 @@
 {
-  "short_name": "Eurojackopt Winner Results",
-  "name": "Lottoland - Eurojackopt Winner Results Page",
+  "short_name": "React Project",
+  "name": "A SPA Client for consuming and endpoint and showing some data.",
   "icons": [
     {
       "src": "favicon.ico",
